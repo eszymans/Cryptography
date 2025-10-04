@@ -28,6 +28,6 @@ replay_pid*
 /zadanie1_DES/.idea/
 
 # Maven target directories
-/zadanie1_DES/target/
-/zadanie1_DES/Model/target/
-/zadanie1_DES/View/target/
+/target/
+/Model/target/
+/View/target/
