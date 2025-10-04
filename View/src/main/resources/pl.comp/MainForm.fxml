@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="267.0" prefWidth="428.0" style="-fx-background-color: #E3F2FD;"
+            xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pl.comp.MainFormController">
+   <children>
+      <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="80.0">
+         <Label fx:id="mainLabel" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #0D47A1;" text="Wybierz algorytm" />
+         <HBox alignment="CENTER" spacing="10">
+            <Button onAction="#handleDESAction" style="-fx-background-color: #64B5F6; -fx-text-fill: white; -fx-font-weight: bold;" text="DES" fx:id="desButton"/>
+            <Button onAction="#handleSchnorrAction" style="-fx-background-color: #64B5F6; -fx-text-fill: white; -fx-font-weight: bold;" text="Schnorr" fx:id="schnorrButton"/>
+         </HBox>
+      </VBox>
+   </children>
+</AnchorPane>

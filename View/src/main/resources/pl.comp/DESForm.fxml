@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" style="-fx-background-color: #f4f4f4; -fx-padding: 15;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.comp.DESFormController">
+
+    <TitledPane collapsible="false" style="-fx-font-weight: bold; -fx-background-color: #e3f2fd;" text="Wczytywanie plików">
+        <VBox spacing="10">
+            <HBox spacing="10">
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #1565c0;" text="Tekst jawny:" />
+                <TextField fx:id="textFieldPlainText" promptText="Nazwa pliku z tekstem jawnym" style="-fx-background-color: #ffffff; -fx-border-color: #90caf9;" />
+                <Button fx:id="buttonLoadPlainText" onAction="#loadPlainTextFile" style="-fx-background-color: #42a5f5; -fx-text-fill: white;" text="Otwórz" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #1565c0;" text="Szyfrogram:" />
+                <TextField fx:id="textFieldCipherText" promptText="Nazwa pliku z szyfrogramem" style="-fx-background-color: #ffffff; -fx-border-color: #90caf9;" />
+                <Button fx:id="buttonLoadCipherText" onAction="#loadCipherTextFile" style="-fx-background-color: #42a5f5; -fx-text-fill: white;" text="Otwórz" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #1565c0;" text=" Klucz:          " />
+                <TextField fx:id="textFieldKey" promptText="Wprowadź klucz szyfrowania" style="-fx-background-color: #ffffff; -fx-border-color: #90caf9;" />
+                <Button fx:id="randomKey" onAction="#randomKeyLos" style="-fx-background-color: #42a5f5; -fx-text-fill: white;" text="Wylosuj" />
+            </HBox>
+        </VBox>
+    </TitledPane>
+
+    <TitledPane collapsible="false" style="-fx-font-weight: bold; -fx-background-color: #e3f2fd;" text="Zapisywanie plików">
+        <VBox spacing="10">
+            <HBox spacing="10">
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #1565c0;" text="Tekst jawny:" />
+                <Button fx:id="buttonSavePlainText" onAction="#savePlainTextFile" style="-fx-background-color: #66bb6a; -fx-text-fill: white;" text="Zapisz" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label style="-fx-font-weight: bold; -fx-text-fill: #1565c0;" text="Szyfrogram:" />
+                <Button fx:id="buttonSaveCipherText" onAction="#saveCipherTextFile" style="-fx-background-color: #66bb6a; -fx-text-fill: white;" text="Zapisz" />
+            </HBox>
+        </VBox>
+    </TitledPane>
+
+    <TitledPane collapsible="false" style="-fx-font-weight: bold; -fx-background-color: #e3f2fd;" text="Edytuj zawartość">
+        <VBox spacing="10">
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #1565c0;" text="Tekst jawny:" />
+            <TextArea fx:id="textAreaPlainText" prefRowCount="4" promptText="Tu podaj tekst jawny" style="-fx-background-color: #ffffff; -fx-border-color: #90caf9;" />
+      
+          <HBox alignment="CENTER" spacing="20">
+              <Button fx:id="buttonEncrypt" onAction="#encryptText" style="-fx-background-color: #ff7043; -fx-text-fill: white; -fx-font-weight: bold;" text="Szyfruj" />
+              <Button fx:id="buttonDecrypt" onAction="#decryptText" style="-fx-background-color: #ff7043; -fx-text-fill: white; -fx-font-weight: bold;" text="Deszyfruj" />
+          </HBox>
+
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #1565c0;" text="Szyfrogram:" />
+            <TextArea fx:id="textAreaCipherText" prefRowCount="4" promptText="Tu podaj szyfrogram" style="-fx-background-color: #ffffff; -fx-border-color: #90caf9;" />
+
+        </VBox>
+    </TitledPane>
+
+</VBox>
